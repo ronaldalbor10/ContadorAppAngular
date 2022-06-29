@@ -10,6 +10,8 @@ export class AppComponent {
 
   public numero: number =0;
 
+  public base :number = 5;
+
   sumar (): void {
     this.numero +=1;
   }
