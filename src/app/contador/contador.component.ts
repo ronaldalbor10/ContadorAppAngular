@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-contador',
-    template: ` <h1>Hola Mundo</h1>
+    template: ` <h1>Contador component</h1>
                 <h2>{{ titulo }}</h2>
                 <h3>Número base: <strong>{{ base }}</strong></h3>
                 <button (click)="acumulador(base);">+{{ base }}</button>
