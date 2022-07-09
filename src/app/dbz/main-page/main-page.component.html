@@ -19,8 +19,25 @@
         <hr>
 
         <form (ngSubmit)="agregar()">
-            <input type="text" placeholder="Nombre personaje">
-            <input type="number" placeholder="Valor poder">
+            <input 
+                type="text" 
+                placeholder="Nombre personaje"
+                name="nombre"
+                [(ngModel)]="nuevo.nombre"
+            >
+
+            <!-- Forma de enlazar un dato con un objeto oneWay Data Binding 
+                 las [] enlazan una variable a un objeto
+                 los () hacen referencia a un metodo
+                 [value]="nuevo.nombre"
+                (input)="cambiarNombre($event)"
+            -->
+            <input 
+                type="number" 
+                placeholder="Valor poder"
+                name="poder"
+                [(ngModel)]="nuevo.poder"
+            >
             <button type="submit">
                 Agregar
             </button>
