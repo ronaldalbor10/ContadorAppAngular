@@ -5,13 +5,17 @@
     <div class="col">
         <h3>Personajes</h3>
         <hr>
-        <ul>
-            <li>Krilin - 700</li>
-            <li>Goku - 15000</li>
-            <li>Vegueta - 10000</li>
-            <li>Picoro - 5000</li>
+        <ul *ngIf="personajes.length>0; else noExistenPersonajes">
+            <li *ngFor="let personaje of personajes; let iterador = index">
+                {{personaje.nombre}} - {{personaje.poder | number}}
+            </li>
+            
             
         </ul>
+
+        <ng-template #noExistenPersonajes>
+            <h3>No existen personajes</h3>
+        </ng-template>
     </div>
 
     <div class="col">
