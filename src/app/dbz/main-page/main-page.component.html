@@ -3,19 +3,7 @@
 <div class="row">
     
     <div class="col">
-        <h3>Personajes</h3>
-        <hr>
-        <ul *ngIf="personajes.length>0; else noExistenPersonajes">
-            <li *ngFor="let personaje of personajes; let iterador = index">
-                {{personaje.nombre}} - {{personaje.poder | number}}
-            </li>
-            
-            
-        </ul>
-
-        <ng-template #noExistenPersonajes>
-            <h3>No existen personajes</h3>
-        </ng-template>
+        <app-personajes [personajes]="personajes"></app-personajes>
     </div>
 
     <div class="col">
