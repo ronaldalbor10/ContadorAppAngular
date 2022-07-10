@@ -21,22 +21,16 @@ export class MainPageComponent  {
     }
   ];
 
-  nuevo:Personaje = {
-    nombre:'',
-    poder:0
-  }
-  agregar(){
-       
-    if(this.nuevo.nombre.trim().length === 0){return;}
-    console.log(this.nuevo);
-    this.personajes.push(this.nuevo);
-    console.log(this.nuevo);
-    this.nuevo ={
-      nombre:'',
-      poder:0
-    }
+  nuevo:Personaje ={
+    nombre:"Maestro Roshi",
+    poder:100
   }
 
+
+  agregarNuevoPersonaje(infoPersonaje:Personaje){
+    this.personajes.push(infoPersonaje);
+  }
+  
   //Funciones para cambiar datos del formulario de forma directa
   /*cambiarNombre(event:any){
     console.log(event.target.value);
