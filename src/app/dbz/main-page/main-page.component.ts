@@ -11,29 +11,25 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent  {
 
-  personajes: Personaje[] =[
-    {
-      nombre:"Goku",
-      poder:16000
-    },
-    {
-      nombre:"Vegueta",
-      poder: 10000
-    }
-  ];
+  //personajes: Personaje[] = [];
 
   nuevo:Personaje ={
     nombre:"Maestro Roshi",
     poder:100
   }
 
+  /*get personajes():Personaje[]{
+    return this.dbzService.personajes;
+  }*/
 
-  agregarNuevoPersonaje(infoPersonaje:Personaje){
+
+  /*agregarNuevoPersonaje(infoPersonaje:Personaje){
     this.personajes.push(infoPersonaje);
-  }
+  }*/
   //Injeccion de dependencias si inicializa el sevicio DbzService al inicializar la clase MainPageComponent
   constructor(private dbzService: DbzService){
-
+    
+    //this.personajes = this.dbzService.personajes;
   }
   
   //Funciones para cambiar datos del formulario de forma directa
