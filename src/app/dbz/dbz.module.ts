@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { NuevoPersonajeComponent } from './nuevo-personaje/nuevo-personaje.component';
+import { DbzService } from './services/dbz.service';
 
 
 
@@ -20,6 +21,9 @@ import { NuevoPersonajeComponent } from './nuevo-personaje/nuevo-personaje.compo
   imports: [
     CommonModule,
     FormsModule
+  ],
+  providers:[
+    DbzService
   ]
 })
 export class DbzModule { }
